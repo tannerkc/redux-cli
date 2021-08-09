@@ -1,6 +1,6 @@
 {
   "name": "@tannerkc/redux-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a simple cli to generate redux base for react apps",
   "main": "index.js",
   "type": "module",
