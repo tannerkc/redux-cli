@@ -12,3 +12,6 @@ A simple CLI to easily create a redux base app to get started quicker.
 
 
 ![Cli Screenshot](cli.png)
+
+all you need to do is enter you constants for the project (you can always add more later):
+ENTER TYPES: add_to_cart, remove_from_cart, update_cart
