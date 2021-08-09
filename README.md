@@ -9,3 +9,6 @@ A simple CLI to easily create a redux base app to get started quicker.
 `npx create-react-app .`
 
 `create-redux`
+
+
+![Alt text](/cli.png)
