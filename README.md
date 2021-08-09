@@ -6,5 +6,6 @@ A simple CLI to easily create a redux base app to get started quicker.
 `npm i -g @tannerkc/redux-cli`
 
 ## run from the root of your react app (outside of src)
-```npx create-react-app .```
+`npx create-react-app .`
+
 `create-redux`
