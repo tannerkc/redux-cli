@@ -12,3 +12,6 @@ A simple CLI to easily create a redux base app to get started quicker.
 
 
 ![Cli Screenshot](cli.png)
+<div align="center">
+    <img src="./cli.png" width="400px"</img> 
+</div>
