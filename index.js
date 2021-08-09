@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import fs from 'fs';
 import readline from 'readline'
 
@@ -7,7 +8,6 @@ const rl = readline.createInterface({
 });
 
 var constants;
-var reducers = []
 
 rl.question("ENTER TYPES/CONSTANTS (comma seperate each): ", function(types) {
     
@@ -95,7 +95,12 @@ rl.question("ENTER TYPES/CONSTANTS (comma seperate each): ", function(types) {
 });
 
 rl.on("close", function() {
-    console.log('\x1b[36m',"\nRedux app created. \x1b[0m");
+    if (fs.existsSync("./src/redux")) {
+        console.log('\x1b[36m',"\nRedux app created. \x1b[0m");
+        process.exit(0);
+        return
+    }
+    console.log('\x1b[36m',"\nExiting... \x1b[0m");
     process.exit(0);
 });
 
@@ -108,19 +113,3 @@ const createDir = (path) =>{
         console.log("Directory created...")
     })
 }
-
-const createFile = (path, content) =>{
-    fs.writeFileSync(process.cwd() + path, content, (err)=>{
-        if(err){
-            console.log('\x1b[31m%s\x1b[0m', "An error occurred: ", err)
-            return
-        }
-        console.log("Directory created...")
-    })
-}
-
-const paths = ['/src/redux/actions', '/src/redux/reducers', '/src/redux/types']
-
-// paths.forEach((path)=>{
-//     createDir(path)
-// })
